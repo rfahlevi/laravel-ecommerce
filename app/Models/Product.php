@@ -16,7 +16,7 @@ class Product extends Model
     protected $fillable = ['category_id', 'brand_id', 'name', 'slug', 'images', 'description', 'price', 'is_active', 'is_featured', 'in_stock', 'on_sale'];
 
     protected $casts = [
-        'images' => 'array'
+        'images' => 'array',
     ];
 
     /**
@@ -51,5 +51,4 @@ class Product extends Model
     {
         return $this->hasMany(OrderItem::class);
     }
-
 }
